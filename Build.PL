@@ -8,4 +8,9 @@ Module::Build->new(
         "B"                 => 0,
         "parent"            => 0,
     },
+    build_requires  => {
+        "Test::Tester"      => "0.08",
+        "Test::More"        => "0.65",
+        "Test::Most"        => "0.23",
+    },
 )->create_build_script;
