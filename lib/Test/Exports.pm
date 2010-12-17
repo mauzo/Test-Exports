@@ -223,7 +223,9 @@ It would be good to fix at least the former.
 
 =head1 AUTHOR
 
-Ben Morrow <ben@morrow.me.uk>.
+Ben Morrow <ben@morrow.me.uk>
+
+=head1 BUGS
 
 Please report any bugs to <bug-Test-Exports@rt.cpan.org>.
 
