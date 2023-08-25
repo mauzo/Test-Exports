@@ -114,4 +114,11 @@ check_test
 DIAG
     "cant_ok with multiple subs";
 
+sub UNIVERSAL::from_parent { 1 }
+
+check_test
+    sub { cant_ok qw/from_parent/, "from parent" },
+    { ok => 1, name => "from parent" },
+    "cant_ok ignores parents";
+
 done_testing;
