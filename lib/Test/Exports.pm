@@ -183,8 +183,9 @@ sub cant_ok {
     my @nok;
 
     for (@_) {
-        my $can = $PKG->can($_);
-        $can and push @nok, $_;
+        no strict 'refs';
+        exists &{$PKG . '::' . $_}
+            and push @nok, $_;
     }
 
     my $ok = $tb->ok(!@nok, $msg);
